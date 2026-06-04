@@ -20,26 +20,27 @@ class TestFan:
 
         print("Values assigned to First Fan and Second Fan successfully!")
         print("Do you want to display each object's speed, power, radius, and color? [Y/N]:")
-        choice = input("> ")
 
         while True:
+            choice = input("> ")
             if choice.upper() == 'Y':
                 self.show_values()
+                break
             elif choice.upper() == 'N':
                 break
             else:
                 print("Invalid input! Please try again.")
 
     def show_values(self):
-        first_fan.get_speed()
-        first_fan.get_power_on()
-        first_fan.get_radius()
-        first_fan.get_color()
+        print(f"Fan 1 Speed: {first_fan.get_speed()}")
+        print(f"Fan 1 Power: {first_fan.get_power_on()}")
+        print(f"Fan 1 Radius: {first_fan.get_radius()}")
+        print(f"Fan 1 Color:{first_fan.get_color()}\n")
 
-        second_fan.get_speed()
-        second_fan.get_power_on()
-        second_fan.get_radius()
-        second_fan.get_color()
+        print(f"Fan 2 Speed: {second_fan.get_speed()}")
+        print(f"Fan 2 Power: {second_fan.get_power_on()}")
+        print(f"Fan 2 Radius: {second_fan.get_radius()}")
+        print(f"Fan 2 Color: {second_fan.get_color()}")
 
 run_test = TestFan()
 run_test.enter_values()
